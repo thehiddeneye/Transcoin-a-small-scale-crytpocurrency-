@@ -88,6 +88,13 @@ def consensus():
 
     blockchain = longest_chain
 
+def proof_of_work(last_proof):
+    incrementor =last_proof +1
+
+    while not (incrementor%9== 0 and incrementor%last_proof==0):
+        incrementor +=1
+    return incrementor
+
 
 
 
