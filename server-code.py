@@ -79,6 +79,17 @@ def find_new_chains():
         other_chains.append(block)
     return other_chains
 
-    
+def consensus():
+    longest_chain  = get_blocks()
+    other_chains = find_new_chains()
+    for chain in other_chains :
+        if len(longest_chain)< len(chain):
+            longest_chain =chain 
+
+    blockchain = longest_chain
+
+
+
+
         
    
